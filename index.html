@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КофеТоп — история одного предпринимателя</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- СТАРТОВЫЙ ЭКРАН -->
+  <div id="screen-start" class="screen flex">
+    <div class="start-wrap">
+      <div class="start-logo">КофеТоп</div>
+      <h1 class="start-title">История одного предпринимателя</h1>
+      <p class="start-sub">Интерактивный тренажёр по предпринимательскому мышлению<br>Реальный кейс · Курс «Предпринимательство» · ДВФУ</p>
+      <div class="start-form">
+        <div class="field">
+          <label for="input-name">Как вас зовут?</label>
+          <input type="text" id="input-name" placeholder="Введите имя" maxlength="20" autocomplete="off">
+        </div>
+        <div class="field">
+          <label>Выберите героя</label>
+          <div class="gender-row">
+            <button class="gender-btn selected" data-gender="m">
+              <img src="avatars/avatar_hero_m.png" alt="" class="gender-avatar">
+              <span>Он</span>
+            </button>
+            <button class="gender-btn" data-gender="f">
+              <img src="avatars/avatar_hero_f.png" alt="" class="gender-avatar">
+              <span>Она</span>
+            </button>
+          </div>
+        </div>
+        <button id="btn-begin" class="btn-primary" disabled>Начать историю</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- КАРТА ГЛАВ -->
+  <div id="screen-map" class="screen">
+    <div class="map-wrap">
+      <div class="map-header">
+        <div class="map-hero-label">Добро пожаловать, <strong id="map-hero-name"></strong></div>
+        <button id="btn-open-diary" class="btn-ghost">Дневник</button>
+        <button id="btn-reset-all" class="btn-ghost small" title="Начать заново">↩</button>
+      </div>
+      <h2 class="map-title">Ваш путь</h2>
+      <div id="chapters-list" class="chapters-list"></div>
+    </div>
+  </div>
+
+  <!-- ИГРОВОЙ ЭКРАН -->
+  <div id="screen-game" class="screen">
+    <div class="game-wrap">
+      <div class="game-topbar">
+        <button id="btn-to-map" class="btn-ghost small">← Карта</button>
+        <div class="progress-track">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <button id="btn-restart" class="btn-ghost small" title="Перезапустить главу">↺</button>
+      </div>
+      <div class="game-chapter-label" id="game-chapter-label"></div>
+      <div class="game-stage">
+        <div id="portrait-area" class="portrait-area">
+          <div id="portrait-img" class="portrait-img"></div>
+          <div id="portrait-name" class="portrait-name"></div>
+        </div>
+        <div class="dialogue-side">
+          <div id="dialogue-text" class="dialogue-text"></div>
+          <div id="actions-area" class="actions-area"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ДНЕВНИК ГЛАВЫ (финал главы) -->
+  <div id="screen-chapter-diary" class="screen flex">
+    <div class="ch-diary-wrap">
+      <div class="ch-diary-tag" id="ch-diary-tag"></div>
+      <div class="ch-diary-icon">📓</div>
+      <h2 id="ch-diary-title"></h2>
+      <blockquote id="ch-diary-text" class="ch-diary-text"></blockquote>
+      <button id="btn-diary-next" class="btn-primary">Продолжить</button>
+    </div>
+  </div>
+
+  <!-- ЭКРАН ПРИНЦИПОВ ЭФФЕКТУАЦИИ -->
+  <div id="screen-principles" class="screen flex">
+    <div class="ch-diary-wrap">
+      <div class="ch-diary-tag">Итог курса</div>
+      <div class="ch-diary-icon">🎓</div>
+      <h2>Пять принципов эффектуации</h2>
+      <div id="principles-text" class="principles-text"></div>
+      <button id="btn-principles-done" class="btn-primary">На карту →</button>
+    </div>
+  </div>
+
+  <!-- ПОЛНЫЙ ДНЕВНИК -->
+  <div id="screen-diary" class="screen">
+    <div class="diary-wrap">
+      <div class="diary-header">
+        <button id="btn-close-diary" class="btn-ghost">← Назад</button>
+        <h2>Дневник героя</h2>
+      </div>
+      <div id="diary-list" class="diary-list"></div>
+      <p id="diary-empty" class="diary-empty">Дневник пока пуст. Пройдите первую главу, чтобы сделать первую запись.</p>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="storage.js"></script>
+  <script src="engine.js"></script>
+</body>
+</html>
