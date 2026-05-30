@@ -12,7 +12,7 @@ const CONTENT = {
     novikov:     { name: 'Андрей Логинов',      color: '#C05A30', style: 'default', initials: 'АЛ',  avatar: 'avatars/avatar_loginov.png' },
     tatyana:     { name: 'Екатерина',           color: '#5B2D8B', style: 'default', initials: 'Е',   avatar: 'avatars/avatar_zaitceva.png' },
     kharchenkov: { name: 'Хрусталёв',           color: '#B5005B', style: 'default', initials: 'ВХ',  avatar: 'avatars/avatar_chrustalev.jpg' },
-    natalya:     { name: 'Нина Павлова',        color: '#1B5E20', style: 'default', initials: 'НП',  avatar: 'avatars/avatar_pavlova.jpg' },
+    natalya:     { name: 'Алёна Павлова',        color: '#1B5E20', style: 'default', initials: 'АП',  avatar: 'avatars/avatar_pavlova.jpg' },
     partner:     { name: 'Хабаровский партнёр', color: '#4A4A4A', style: 'default', initials: 'П',   avatar: 'avatars/avatar_khabarovsk.png' },
   },
 
@@ -1336,21 +1336,21 @@ const CONTENT = {
         ch7_s3: {
           type:      'dialogue',
           character: 'narrator',
-          text:      'Производство требует руководителя. Нина Павлова — сотрудница, которая тянет всю операционку на кухне. Но она уже перегружена. Ваш партнёр идёт к ней поговорить.',
+          text:      'Производство требует руководителя. Алёна Павлова — сотрудница, которая тянет всю операционку на кухне. Но она уже перегружена. Ваш партнёр идёт к ней поговорить.',
           next:      'ch7_s4'
         },
 
         ch7_s4: {
           type:      'dialogue',
           character: 'narrator',
-          text:      'Нина выслушивает предложение. Молча разворачивается и уходит по лестнице наверх.',
+          text:      'Алёна выслушивает предложение. Молча разворачивается и уходит по лестнице наверх.',
           next:      'ch7_c2'
         },
 
         ch7_c2: {
           type:      'choice',
           character: 'hero',
-          text:      'Нина явно не хочет брать эту роль. Что делать?',
+          text:      'Алёна явно не хочет брать эту роль. Что делать?',
           choices: [
             {
               text:    'Догнать, поговорить честно и объяснить, почему именно она',
@@ -1384,7 +1384,7 @@ const CONTENT = {
         ch7_s6: {
           type:      'dialogue',
           character: 'narrator',
-          text:      'Нина берётся. Через шесть месяцев производство выросло с 1,3 до 11 тонн курицы в месяц. Это рост в восемь раз. Без потери качества.',
+          text:      'Алёна берётся. Через шесть месяцев производство выросло с 1,3 до 11 тонн курицы в месяц. Это рост в восемь раз. Без потери качества.',
           next:      'ch7_s7'
         },
 
